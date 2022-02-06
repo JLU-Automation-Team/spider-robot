@@ -68,3 +68,5 @@ class accel():
         while 1:
             print(self.get_values())
             sleep(0.05)
+
+            
