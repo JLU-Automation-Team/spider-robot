@@ -146,3 +146,5 @@ class SSD1306_SPI(SSD1306):
         self.spi.write(buf)
         self.cs(1)
 
+
+        
