@@ -255,7 +255,7 @@ def WIFI_Connect():
 
     if not wlan.isconnected():
         print('connecting to network...')
-        wlan.connect('Uz', 'ufp0-0-1') #输入WIFI账号密码
+        wlan.connect('test', '88888888') #输入WIFI的SSID和密码
 
         while not wlan.isconnected():
             #15S超时判断
@@ -301,12 +301,12 @@ def webserver():
         client_sock.close()
 
 def main():
-    """让oled屏幕显示内容
+    """主循环
     """
     while 1:
-        print(judge_instruct())
+        #print(judge_instruct())
         ur_command = judge_instruct()
-        oled_display(ur_command, wifi_config)
+        oled_display(ur_command, wifi_config) #让oled显示内容
         
 
 
@@ -321,19 +321,14 @@ _thread.start_new_thread(main, ())
 _thread.start_new_thread(webserver, ())
 
 
-    #读入指令，调用显示函数，显示当前指令和wifi状态
-    #ur_command = judge_instruct()
-    #oled_display(ur_command, wifi_config)
-    
-    #测试打印
-    #print(wifi_config)
-    #print(judge_instruct())
-    
-    
-#webserver()
-#main()
-    
+#读入指令，调用显示函数，显示当前指令和wifi状态
+#ur_command = judge_instruct()
+#oled_display(ur_command, wifi_config)
 
+#测试打印
+#print(wifi_config)
+#print(judge_instruct())
+    
 
 
 
